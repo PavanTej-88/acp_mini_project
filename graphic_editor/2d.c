@@ -219,7 +219,7 @@ int prompt_int(const char *msg) {
     return val;
 }
 
-void status_msg(const char msg) {
+void status_msg(const char *msg) {
     mvwprintw(win2, ROWS + 1, 2, "%-56s", msg);
     wrefresh(win2);
 }
@@ -234,7 +234,7 @@ void show_shapes_list(void) {
     int found = 0;
     int i;
     for (i = 0; i < total && row < ROWS; i++) {
-        if (!list[i].flag) continue;
+        if (!list[1].flag) continue;
         found = 1;
         Shape *s = &list[i];
         switch (s->kind) {
