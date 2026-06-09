@@ -327,7 +327,7 @@ void run(void) {
                     add_shape(SHAPE_TRIANGLE, x, y, p1, 0);
                     display_canvas_ncurses();
                     status_msg("Triangle added.");
-                    
+                    break;
 
                 case 5:
                     show_shapes_list();
