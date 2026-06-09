@@ -260,7 +260,7 @@ void show_shapes_list(void) {
                 break;
         }
     }
-    if (!foun)
+    if (!found)
         mvwprintw(win2, row, 2, "(no shapes yet)");
     mvwprintw(win2, ROWS + 1, 2, "Press any key to go back...");
     wrefresh(win2);
@@ -273,7 +273,7 @@ void run(void) {
     int ch;
 
     clear_canvas();
-    draw_menu(hl);
+    draw_menu();
     display_canvas_ncurses();
 
     while (1) {
