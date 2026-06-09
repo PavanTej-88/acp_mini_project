@@ -207,7 +207,7 @@ void draw_menu(int hl) {
     wrefresh(win1);
 }
 
-int prompt_int(const char msg) {
+int prompt_int(const char *msg) {
     echo();
     int h = ROWS + 3;
     mvwprintw(win1, h - 3, 1, "%-18s", msg);
@@ -219,7 +219,7 @@ int prompt_int(const char msg) {
     return val;
 }
 
-void status_msg(const char *msg) {
+void status_msg(const char msg) {
     mvwprintw(win2, ROWS + 1, 2, "%-56s", msg);
     wrefresh(win2);
 }
