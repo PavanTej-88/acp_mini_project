@@ -202,12 +202,12 @@ void draw_menu(int hl) {
             mvwprintw(win1, i + 2, 2, "%s", items[i]);
         }
     }
-    mvwprintw(win1, n + 1, 1, "UP/DOWN: navigate");
+    mvwprintw(win1, n + 3, 1, "UP/DOWN: navigate");
     mvwprintw(win1, n + 4, 1, "ENTER  : select  ");
     wrefresh(win1);
 }
 
-int prompt_int(const char *msg) {
+int prompt_int(const char msg) {
     echo();
     int h = ROWS + 3;
     mvwprintw(win1, h - 3, 1, "%-18s", msg);
